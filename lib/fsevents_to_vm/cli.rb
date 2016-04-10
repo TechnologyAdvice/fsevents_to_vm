@@ -8,7 +8,7 @@ module FseventsToVm
     option :ssh_ip, type: :string
     option :ssh_username, type: :string, default: 'docker'
     desc "start PATH",
-      "Watch PATH and forward filesystem touch events to the Dinghy VM."
+      "Watch PATH and forward filesystem touch events to the VM."
     def start(listen_dir = ENV['HOME'])
       debug = options[:debug]
 
@@ -18,7 +18,7 @@ module FseventsToVm
       forwarder = FseventsToVm::SshEmit.new(options[:ssh_identity_file], options[:ssh_ip], options[:ssh_username])
 
       if debug
-        puts "Watching #{listen_dir} and forwarding events to Dinghy VM..."
+        puts "Watching #{listen_dir} and forwarding events to VM..."
       end
 
       watcher.run do |event|

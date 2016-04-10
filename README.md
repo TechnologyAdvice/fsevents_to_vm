@@ -1,8 +1,22 @@
 # FSEvents To VM
 
-Forward OS X file system events to a VM, designed for use with Dinghy.
+Forward OS X file system events to a VM, designed for use with Dinghy. Updated by TechnologyAdvice for use with Dlite.
 
-# Installation
+# Installation of this Dlite-compatible fsevents_to_vm
+
+`cd` to the folder you'd like to install into, then...
+
+```
+sudo gem install bundle rake
+git clone https://github.com/TechnologyAdvice/fsevents_to_vm.git
+cd fsevents_to_vm
+bundler
+sudo rake insall
+```
+
+Don't forget to execute with both the `--ssh-identity-file` and `--ssh-ip` arguments!
+
+# Installation of the original fsevents_to_vm
 
 Normally you won't install this manually, Dinghy will do it for you.
 

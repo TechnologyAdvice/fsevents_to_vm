@@ -16,6 +16,14 @@ sudo rake insall
 
 Don't forget to execute with both the `--ssh-identity-file` and `--ssh-ip` arguments!
 
+If you'd like fsevents_to_vm to run on startup for your home folder:
+
+```
+mkdir -p ~/Library/LaunchAgents
+cp LaunchAgents/local.fsevents_to_vm.plist ~/Library/LaunchAgents
+launchctl load -w ~/Library/LaunchAgents/local.fsevents_to_vm.plist
+```
+
 # Installation of the original fsevents_to_vm
 
 Normally you won't install this manually, Dinghy will do it for you.
